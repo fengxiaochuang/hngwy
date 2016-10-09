@@ -50,7 +50,7 @@ for cate in category:
 # 判断
 # 2. 生成html的文件
 mlist = db.execute(
-    "SELECT date_format(date,'%Y%m') AS dt, COUNT(date_format(date,'%Y%m')) as c FROM page where date_format(date,'%Y%m') >= 201601 GROUP BY date_format(date,'%Y%m')")
+    "SELECT date_format(date,'%Y%m') AS dt, COUNT(date_format(date,'%Y%m')) as c FROM page where date_format(date,'%Y%m') <= 201611 and date_format(date,'%Y%m') >= 201608 GROUP BY date_format(date,'%Y%m')")
 
 for d in mlist:
     print(d)
